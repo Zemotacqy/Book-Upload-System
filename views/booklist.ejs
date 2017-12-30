@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Success</title>
+    </head>
+    <body>
+        <h1><center>BOOKS</center></h1>
+        
+
+        <h2><% books_list.forEach(function(item, index){ %> 
+            <span><h3><%= item.title %></h3>
+            <form action="/upload" method="POST">
+                <input type="hidden" name="book-count" value=<%= index %> class="form-control">
+                <button class="btn btn-warning btn-md" type="submit"> Go </button>
+            </form></span>
+            <h4><%= item.authors %></h4>
+            <p><%= item.description %></p>
+            
+            <br><hr><br><br>
+
+        <% }); %></h2>
+    </body>
+</html>

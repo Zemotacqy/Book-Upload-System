@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Book Upload</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1><span class="fa fa-search"></span> Search Book</h1>
+                
+                <form action="/search-list" method="POST">
+                    <span>Search By : </span>
+                    <input type="radio" name="foobar" value="title" checked> Title
+                    <input type="radio" name="foobar" value="author">  Author<br><br>
+                    <input type="text" name="search_text" placeholder="Enter Search Text" class="form-control" required><br>
+                    <button class="btn btn-warning btn-md" type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>
