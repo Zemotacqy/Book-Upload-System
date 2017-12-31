@@ -6,7 +6,7 @@
         <h1><center>BOOKS</center></h1>
         
 
-        <h2><% books_list.forEach(function(item, index){ %> 
+        <% books_list.forEach(function(item, index){ %> 
             <span><h3><%= item.title %></h3>
             <form action="/upload" method="POST">
                 <input type="hidden" name="book-count" value=<%= index %> class="form-control">
@@ -17,6 +17,6 @@
             
             <br><hr><br><br>
 
-        <% }); %></h2>
+        <% }); %>
     </body>
 </html>

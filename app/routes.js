@@ -34,6 +34,22 @@ module.exports = function(app){
         res.render('search.ejs');
     });
 
+    app.post('/success', function(req, res){
+        //console.log(req.body);
+        var Book = require('./model/book.js');
+        var newbook = new Book(req.body);
+        newbook.save()
+        .then(function(){
+            res.render('success.ejs', { 'name' : newbook.title, 'author' : newbook.author });
+        })
+        .catch(function(err){
+            if(err)
+                throw err;
+            else
+                console.log("Something uncanny happened");
+        });
+    });
+
     app.post('/upload', function(req, res){
         //console.log(req.body['book-count']);
         var cnt = req.body['book-count'];
